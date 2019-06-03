@@ -8,6 +8,6 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     # when this method is called it should assign the song's artist to Drake
-    self.songs.map { |song| song.artist.name }
+    self.artist = Artist.new(name: "Drake")
   end
 end
